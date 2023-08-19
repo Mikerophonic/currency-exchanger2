@@ -3,9 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Currency Exchanger</title>
 </head>
 <body>
-    
+    <div class="container">
+        <h1>Currency Exchanger</h1>
+        <p>To get the current exchange rate, please enter an amount in US dollars and a currency to exchange to.</p>
+        <form>
+          <label for="USD">Enter USD:</label>
+          <input id="USD" type="number" name="USD">
+          <label for="currency-select">Choose a currency:</label>
+
+          <select name="currencies" id="currency-select">
+            <option value="">--Please choose an option--</option>
+            <option value="EUR">Euro (EUR)</option>
+            <option value="JPY">Japanese Yen (JPY)</option>
+            <option value="GBP">British pound sterling (GBP)</option>
+            <option value="CNY">Chinese yuan (CNY)</option>
+            <option value="AUD">Australian dollar (AUD)</option>
+            <option value="CAD">Canadian dollar (CAD)</option>
+            <option value="CHF">Swiss franc (CHF)</option>
+            <option value="HKD">Hong Kong dollar (HKD)</option>
+            <option value="NZD">New Zealand dollar (NZD)</option>
+          </select>
+
+          <button type="submit" class="btn-success" id="submit-btn">Get amount</button>
+        </form>
+        <p id="showResponse"></p>
+      </div>
 </body>
 </html>
