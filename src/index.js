@@ -6,7 +6,7 @@ import CurrencyExchange from './currency-exchange.js';
 // Business Logic
 
 async function getExchange(USD, newCurrency) {
-  const response = await CurrencyExchange.getExchange(USD);
+  const response = await CurrencyExchange.getExchangeRate();
   console.log(response);
   if (response.result === "success") {
     const newCurrencyAmount = USD * response["conversion_rates"][newCurrency];
